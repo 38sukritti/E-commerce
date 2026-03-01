@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grovix Studio - Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="stylesheet" href="/src/styles/animations.css">
+</head>
+<body>
+  <canvas id="webgl"></canvas>
+  
+  <div class="cursor"></div>
+  <div class="cursor-glow"></div>
+
+  <nav class="navbar fade-in">
+    <div class="logo">GROVIX <span>STUDIO</span></div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <h1 class="page-title pop-up">Let's Build Your <span class="gradient-text">Empire</span></h1>
+    <p class="page-subtitle pop-up">Start your journey to digital domination.</p>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-terminal-wrapper">
+      <div class="contact-terminal pop-up">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="terminal-title">inquiry_terminal.grovix</span>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label class="terminal-label">$ name --required</label>
+            <input type="text" name="name" required placeholder="Enter your full name">
+          </div>
+          <div class="form-group">
+            <label class="terminal-label">$ email --required</label>
+            <input type="email" name="email" required placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label class="terminal-label">$ phone --required</label>
+            <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX">
+          </div>
+          <div class="form-group">
+            <label class="terminal-label">$ company --optional</label>
+            <input type="text" name="company" placeholder="Your company name">
+          </div>
+          <div class="form-group">
+            <label class="terminal-label">$ service --optional</label>
+            <select name="service">
+              <option value="">Select a service</option>
+              <option value="starter">Starter Plan - ₹20,000/mo</option>
+              <option value="growth">Growth Plan - ₹45,000/mo</option>
+              <option value="scale">Scale Plan - ₹60,000/mo</option>
+              <option value="domination">Domination Plan - ₹80,000/mo</option>
+              <option value="custom">Custom Solution</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="terminal-label">$ message --optional</label>
+            <textarea name="message" rows="4" placeholder="Tell us about your business and goals..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary">SUBMIT INQUIRY</button>
+        </form>
+        <div class="inquiry-result" id="inquiryResult"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <h2 class="section-title pop-up">Frequently Asked Questions</h2>
+    <div class="faq-grid">
+      <div class="faq-item pop-up">
+        <h3>How long does it take to see results?</h3>
+        <p>Most clients see initial results within 30-60 days, with significant growth by month 3-6 as systems optimize.</p>
+      </div>
+      <div class="faq-item pop-up">
+        <h3>Do you work with startups?</h3>
+        <p>Yes! We work with businesses at all stages, from startups to established enterprises.</p>
+      </div>
+      <div class="faq-item pop-up">
+        <h3>What industries do you serve?</h3>
+        <p>We've successfully worked with e-commerce, SaaS, real estate, healthcare, fitness, and more.</p>
+      </div>
+      <div class="faq-item pop-up">
+        <h3>Can I cancel anytime?</h3>
+        <p>Yes, all plans are month-to-month with no long-term contracts required.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">GROVIX <span>STUDIO</span></div>
+        <p>Premium digital growth systems for ambitious businesses.</p>
+        <div class="social-links">
+          <a href="#" class="social-icon">📷</a>
+          <a href="#" class="social-icon">💼</a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <div class="footer-links">
+          <a href="home.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="portfolio.html">Portfolio</a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Services</h3>
+        <div class="footer-links">
+          <a href="services.html">Website Development</a>
+          <a href="services.html">Meta Ads</a>
+          <a href="services.html">Social Media</a>
+          <a href="services.html">Brand Identity</a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <div class="footer-links">
+          <a href="mailto:hello@grovixstudio.com">hello@grovixstudio.com</a>
+          <a href="tel:+919999999999">+91 99999 99999</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2026 Grovix Studio. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/scene.js"></script>
+  <script type="module" src="/src/js/contact.js"></script>
+  <script type="module" src="/src/js/animations.js"></script>
+</body>
+</html>
