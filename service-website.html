@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Creation - Grovix Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="stylesheet" href="/src/styles/animations.css">
+</head>
+<body>
+  <canvas id="webgl"></canvas>
+  <div class="cursor"></div>
+  <div class="cursor-glow"></div>
+
+  <nav class="navbar fade-in">
+    <div class="logo">GROVIX <span>STUDIO</span></div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <h1 class="page-title pop-up">🌐 <span class="gradient-text">Website Creation</span></h1>
+    <p class="page-subtitle pop-up">Premium, conversion-optimized websites that turn visitors into customers</p>
+  </section>
+
+  <section class="process-section">
+    <h2 class="section-title">What You Get</h2>
+    <div class="services-detail-grid">
+      <div class="service-detail-card scroll-reveal">
+        <div class="service-detail-icon">⚡</div>
+        <h3>Lightning Fast Performance</h3>
+        <p>Optimized for speed with sub-2 second load times. Fast websites rank higher and convert better.</p>
+      </div>
+      <div class="service-detail-card scroll-reveal">
+        <div class="service-detail-icon">📱</div>
+        <h3>Mobile-First Design</h3>
+        <p>Perfectly responsive across all devices. 70% of traffic is mobile - we optimize for it.</p>
+      </div>
+      <div class="service-detail-card scroll-reveal">
+        <div class="service-detail-icon">🎨</div>
+        <h3>Custom Design</h3>
+        <p>Unique, brand-aligned designs that stand out. No templates, no cookie-cutter solutions.</p>
+      </div>
+      <div class="service-detail-card scroll-reveal">
+        <div class="service-detail-icon">🔒</div>
+        <h3>Secure & Reliable</h3>
+        <p>SSL certificates, regular backups, and enterprise-grade security included.</p>
+      </div>
+      <div class="service-detail-card scroll-reveal">
+        <div class="service-detail-icon">🚀</div>
+        <h3>SEO Optimized</h3>
+        <p>Built for search engines from day one. Rank higher, get found easier.</p>
+      </div>
+      <div class="service-detail-card scroll-reveal">
+        <div class="service-detail-icon">💼</div>
+        <h3>CMS Integration</h3>
+        <p>Easy content management so you can update your site without technical knowledge.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="process-section">
+    <h2 class="section-title">Our Process</h2>
+    <div class="process-grid">
+      <div class="process-step scroll-reveal">
+        <div class="step-number">01</div>
+        <h3>Discovery</h3>
+        <p>We understand your business, goals, and target audience to create the perfect strategy.</p>
+      </div>
+      <div class="process-step scroll-reveal">
+        <div class="step-number">02</div>
+        <h3>Design</h3>
+        <p>Custom mockups and prototypes that bring your vision to life before development.</p>
+      </div>
+      <div class="process-step scroll-reveal">
+        <div class="step-number">03</div>
+        <h3>Development</h3>
+        <p>Clean, modern code built with the latest technologies for performance and scalability.</p>
+      </div>
+      <div class="process-step scroll-reveal">
+        <div class="step-number">04</div>
+        <h3>Launch</h3>
+        <p>Thorough testing, optimization, and a smooth launch with ongoing support.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-content pop-up">
+      <h2>Ready to Build Your Dream Website?</h2>
+      <p>Let's create a website that drives real results</p>
+      <button class="btn-primary" onclick="window.location.href='contact.html'">GET STARTED</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">GROVIX <span>STUDIO</span></div>
+        <p>Premium digital growth systems for ambitious businesses.</p>
+        <div class="social-links">
+          <a href="#" class="social-icon">📷</a>
+          <a href="#" class="social-icon">💼</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <div class="footer-links">
+          <a href="home.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="team.html">Team</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Services</h3>
+        <div class="footer-links">
+          <a href="service-website.html">Website Development</a>
+          <a href="service-meta-ads.html">Meta Ads</a>
+          <a href="service-social-media.html">Social Media</a>
+          <a href="service-brand.html">Brand Identity</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <div class="footer-links">
+          <a href="mailto:hello@grovixstudio.com">hello@grovixstudio.com</a>
+          <a href="tel:+919999999999">+91 99999 99999</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Grovix Studio. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/scene.js"></script>
+  <script type="module" src="/src/js/animations.js"></script>
+</body>
+</html>

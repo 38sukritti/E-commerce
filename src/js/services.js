@@ -11,8 +11,8 @@ gsap.from('.navbar', {
   ease: 'power3.out'
 });
 
-// Service Cubes Animation
-gsap.from('.service-cube', {
+// Service Cards Animation
+gsap.from('.service-card', {
   scrollTrigger: {
     trigger: '.services-section',
     start: 'top 70%',

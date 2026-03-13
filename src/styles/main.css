@@ -276,7 +276,7 @@ body:hover .cursor {
 
 /* Section Styles */
 section {
-  padding: 80px 10%;
+  padding: 50px 10%;
   position: relative;
 }
 
@@ -284,7 +284,7 @@ section {
   font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 800;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   background: linear-gradient(135deg, #fff, var(--accent-blue));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -405,7 +405,7 @@ section {
 
 /* CTA Section */
 .cta-section {
-  padding: 80px 10%;
+  padding: 60px 10%;
   background: linear-gradient(135deg, rgba(0, 217, 255, 0.1), rgba(168, 85, 247, 0.1));
   position: relative;
   overflow: hidden;
@@ -453,6 +453,86 @@ section {
   }
 }
 
+/* Services Detail Section */
+.services-detail-section {
+  padding: 50px 10%;
+  background: var(--bg-darker);
+}
+
+.services-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.service-detail-card {
+  padding: 40px 35px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.service-detail-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-blue);
+  box-shadow: 0 20px 50px rgba(0, 217, 255, 0.25);
+  background: radial-gradient(circle at 50% 0%, rgba(0, 217, 255, 0.08), var(--glass-bg));
+}
+
+.service-detail-card[onclick] {
+  cursor: pointer;
+}
+
+.service-detail-card[onclick]:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(0, 217, 255, 0.35);
+}
+
+.service-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.service-detail-icon {
+  font-size: 3rem;
+  filter: drop-shadow(0 0 15px var(--accent-blue));
+  flex-shrink: 0;
+}
+
+.service-detail-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.service-detail-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+.service-detail-card .metric {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-violet));
+  color: #000;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  align-self: flex-start;
+}
+
 /* Services Section */
 .services-section {
   padding: 80px 10%;
@@ -461,33 +541,38 @@ section {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, minmax(0,1fr));
   gap: 40px;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-.service-cube {
-  position: relative;
+.flip-card {
   height: 350px;
   perspective: 1000px;
   cursor: pointer;
 }
 
-.cube-face {
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  padding: 40px;
-  background: var(--glass-bg);
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border);
-  border-radius: 20px;
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   backface-visibility: hidden;
-}
-
-.cube-face.front {
+  border-radius: 20px;
+  padding: 40px 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -495,24 +580,24 @@ section {
   text-align: center;
 }
 
-.cube-face.side {
-  transform: rotateY(90deg);
-  opacity: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: radial-gradient(circle at 50% 0%, rgba(0, 217, 255, 0.2), rgba(20, 20, 30, 0.8));
+.flip-card-front {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  transition: all 0.3s ease;
 }
 
-.service-cube:hover .cube-face.front {
-  transform: rotateY(-90deg);
-  opacity: 0;
+.flip-card:hover .flip-card-front {
+  border-color: var(--accent-blue);
+  box-shadow: 0 15px 40px rgba(0, 217, 255, 0.2);
 }
 
-.service-cube:hover .cube-face.side {
-  transform: rotateY(0deg);
-  opacity: 1;
-  background: radial-gradient(circle at 50% 0%, rgba(0, 217, 255, 0.25), rgba(20, 20, 30, 0.9));
+.flip-card-back {
+  background: radial-gradient(circle at 50% 0%, rgba(0, 217, 255, 0.2), rgba(20, 20, 30, 0.95));
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--accent-blue);
+  transform: rotateY(180deg);
+  box-shadow: 0 20px 60px rgba(0, 217, 255, 0.3);
 }
 
 .service-icon {
@@ -521,16 +606,23 @@ section {
   filter: drop-shadow(0 0 20px var(--accent-blue));
 }
 
-.service-cube h3 {
+.flip-card-front h3 {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  color: #fff;
 }
 
-.cube-face.side p {
+.flip-card-back h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--accent-blue);
+}
+
+.flip-card-back p {
   font-size: 1rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 20px;
 }
 
@@ -542,6 +634,7 @@ section {
   border-radius: 20px;
   font-weight: 700;
   font-size: 0.9rem;
+  margin-top: auto;
 }
 
 /* Pricing Section */
@@ -692,37 +785,104 @@ section {
   margin: 0 auto;
 }
 
-.extra-card {
+.extra-flip-card {
+  height: 350px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.extra-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.extra-flip-card:hover .extra-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.extra-flip-front,
+.extra-flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
   padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.extra-flip-front {
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
-  border-radius: 20px;
-  text-align: center;
   transition: all 0.3s ease;
 }
 
-.extra-card:hover {
-  transform: translateY(-5px);
+.extra-flip-card:hover .extra-flip-front {
   border-color: var(--accent-blue);
   box-shadow: 0 15px 40px rgba(0, 217, 255, 0.15);
 }
 
-.extra-card h3 {
+.extra-flip-back {
+  background: radial-gradient(circle at 50% 0%, rgba(0, 217, 255, 0.2), rgba(20, 20, 30, 0.95));
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--accent-blue);
+  transform: rotateY(180deg);
+  box-shadow: 0 20px 60px rgba(0, 217, 255, 0.3);
+}
+
+.extra-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 20px var(--accent-blue));
+}
+
+.extra-flip-front h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
+  color: #fff;
+}
+
+.extra-flip-back h3 {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  color: var(--accent-blue);
 }
 
 .extra-price {
   font-size: 1.8rem;
   font-weight: 700;
   color: var(--accent-blue);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-.extra-card p:last-child {
+.extra-tagline {
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.95rem;
+}
+
+.extra-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.extra-features li {
+  padding: 10px 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.extra-features li:last-child {
+  border-bottom: none;
 }
 
 /* Portfolio Section */
@@ -1175,6 +1335,10 @@ section {
     grid-template-columns: 1fr;
   }
 
+  .flip-card {
+    height: 320px;
+  }
+
   .portfolio-item {
     min-width: 90vw;
   }
@@ -1200,13 +1364,13 @@ section {
 
 /* Page Hero */
 .page-hero {
-  min-height: 60vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 150px 10% 100px;
+  padding: 120px 10% 60px;
 }
 
 .page-title {
@@ -1289,6 +1453,10 @@ section {
   margin: 0 auto;
 }
 
+.portfolio-section {
+  padding: 40px 10%;
+}
+
 .portfolio-card {
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
@@ -1310,6 +1478,19 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover .portfolio-image img {
+  transform: scale(1.1);
 }
 
 .portfolio-placeholder {

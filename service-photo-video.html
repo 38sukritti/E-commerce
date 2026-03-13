@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photo & Video Production - Grovix Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="stylesheet" href="/src/styles/animations.css">
+</head>
+<body>
+  <canvas id="webgl"></canvas>
+  <div class="cursor"></div>
+  <div class="cursor-glow"></div>
+
+  <nav class="navbar fade-in">
+    <div class="logo">GROVIX <span>STUDIO</span></div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <h1 class="page-title pop-up">📷 <span class="gradient-text">Photo & Video Production</span></h1>
+    <p class="page-subtitle pop-up">Professional DSLR content that elevates your brand to premium status</p>
+  </section>
+
+  <section class="process-section">
+    <h2 class="section-title">What You Get</h2>
+    <div class="services-detail-grid">
+      <div class="service-detail-card scroll-reveal">
+        <div class="service-detail-icon">📸</div>
+        <h3>Product Photography</h3>
+        <p>Studio-quality product shots with professional lighting and editing for e-commerce and marketing.</p>
+      </div>
+      <div class="service-detail-card scroll-reveal">
+        <div class="service-detail-icon">🎬</div>
+        <h3>Video Production</h3>
+        <p>Promotional videos, ads, testimonials, and brand stories shot in 4K with cinematic quality.</p>
+      </div>
+      <div class="service-detail-card scroll-reveal">
+        <div class="service-detail-icon">👔</div>
+        <h3>Corporate Shoots</h3>
+        <p>Professional headshots, team photos, and office environment shots for your website and LinkedIn.</p>
+      </div>
+      <div class="service-detail-card scroll-reveal">
+        <div class="service-detail-icon">📱</div>
+        <h3>Social Media Content</h3>
+        <p>Vertical videos, reels, and stories optimized for Instagram, TikTok, and Facebook.</p>
+      </div>
+      <div class="service-detail-card scroll-reveal">
+        <div class="service-detail-icon">✂️</div>
+        <h3>Post-Production</h3>
+        <p>Professional editing, color grading, motion graphics, and sound design included.</p>
+      </div>
+      <div class="service-detail-card scroll-reveal">
+        <div class="service-detail-icon">🎯</div>
+        <h3>Content Strategy</h3>
+        <p>Strategic planning to ensure every shoot delivers maximum value and usable content.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="process-section">
+    <h2 class="section-title">Our Process</h2>
+    <div class="process-grid">
+      <div class="process-step scroll-reveal">
+        <div class="step-number">01</div>
+        <h3>Pre-Production</h3>
+        <p>Concept development, shot list creation, and logistics planning for the shoot.</p>
+      </div>
+      <div class="process-step scroll-reveal">
+        <div class="step-number">02</div>
+        <h3>Production</h3>
+        <p>Professional shoot with DSLR cameras, lighting, and audio equipment.</p>
+      </div>
+      <div class="process-step scroll-reveal">
+        <div class="step-number">03</div>
+        <h3>Post-Production</h3>
+        <p>Editing, color grading, and final touches to deliver polished, ready-to-use content.</p>
+      </div>
+      <div class="process-step scroll-reveal">
+        <div class="step-number">04</div>
+        <h3>Delivery</h3>
+        <p>All files delivered in multiple formats optimized for different platforms and uses.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-content pop-up">
+      <h2>Ready for Studio-Quality Content?</h2>
+      <p>Let's create visual content that makes your brand unforgettable</p>
+      <button class="btn-primary" onclick="window.location.href='contact.html'">GET STARTED</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">GROVIX <span>STUDIO</span></div>
+        <p>Premium digital growth systems for ambitious businesses.</p>
+        <div class="social-links">
+          <a href="#" class="social-icon">📷</a>
+          <a href="#" class="social-icon">💼</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <div class="footer-links">
+          <a href="home.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="team.html">Team</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Services</h3>
+        <div class="footer-links">
+          <a href="service-website.html">Website Development</a>
+          <a href="service-meta-ads.html">Meta Ads</a>
+          <a href="service-social-media.html">Social Media</a>
+          <a href="service-brand.html">Brand Identity</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <div class="footer-links">
+          <a href="mailto:hello@grovixstudio.com">hello@grovixstudio.com</a>
+          <a href="tel:+919999999999">+91 99999 99999</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Grovix Studio. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/scene.js"></script>
+  <script type="module" src="/src/js/animations.js"></script>
+</body>
+</html>
