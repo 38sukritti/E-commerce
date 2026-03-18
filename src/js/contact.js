@@ -2,7 +2,7 @@
 const contactForm = document.getElementById('contactForm');
 const inquiryResult = document.getElementById('inquiryResult');
 
-const apiBase = 'http://127.0.0.1:8000';
+const apiBase = 'https://e-commerce-backend-dy1m.onrender.com';
 
 document.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
