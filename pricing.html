@@ -109,12 +109,12 @@
   <section class="extra-services">
     <h2 class="section-title pop-up">One-Shot Services</h2>
     <div class="extra-grid">
-      <div class="extra-flip-card scroll-reveal hover-lift">
+      <div class="extra-flip-card scroll-reveal hover-lift" id="website-card">
         <div class="extra-flip-inner">
           <div class="extra-flip-front">
             <div class="extra-icon">🌐</div>
             <h3>Website Only</h3>
-            <p class="extra-price">₹15,000 - ₹20,000</p>
+            <p class="extra-price">₹6,000 - ₹10,000</p>
             <p class="extra-tagline">Premium standalone website</p>
           </div>
           <div class="extra-flip-back">
@@ -145,45 +145,26 @@
               <li>✓ Typography</li>
               <li>✓ Brand Guidelines</li>
             </ul>
+            <button class="select-branding-btn" data-plan="Logo + Branding" data-price="15000-20000">SELECT PLAN</button>
           </div>
         </div>
       </div>
 
-      <div class="extra-flip-card scroll-reveal hover-lift">
+      <div class="extra-flip-card scroll-reveal hover-lift" id="photography-card">
         <div class="extra-flip-inner">
           <div class="extra-flip-front">
             <div class="extra-icon">📷</div>
             <h3>Photography</h3>
-            <p class="extra-price">₹20,000 - ₹25,000</p>
-            <p class="extra-tagline">Professional DSLR photoshoot</p>
+            <p class="extra-price">₹20,000 - ₹35,000</p>
+            <p class="extra-tagline">Professional photography services</p>
           </div>
           <div class="extra-flip-back">
             <h3>Photography</h3>
             <ul class="extra-features">
-              <li>✓ 4-Hour Session</li>
-              <li>✓ 50+ Edited Photos</li>
-              <li>✓ Studio Quality</li>
+              <li>✓ Professional DSLR</li>
+              <li>✓ Edited Photos</li>
+              <li>✓ Video Options</li>
               <li>✓ Commercial Rights</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="extra-flip-card scroll-reveal hover-lift">
-        <div class="extra-flip-inner">
-          <div class="extra-flip-front">
-            <div class="extra-icon">🎬</div>
-            <h3>Photo + Video</h3>
-            <p class="extra-price">₹25,000 - ₹30,000</p>
-            <p class="extra-tagline">Complete production package</p>
-          </div>
-          <div class="extra-flip-back">
-            <h3>Photo + Video</h3>
-            <ul class="extra-features">
-              <li>✓ Full Day Shoot</li>
-              <li>✓ Photos + Videos</li>
-              <li>✓ Professional Editing</li>
-              <li>✓ Multiple Formats</li>
             </ul>
           </div>
         </div>
@@ -198,6 +179,118 @@
       <button class="btn-primary" onclick="window.location.href='contact.html'">SCHEDULE A CALL</button>
     </div>
   </section>
+
+  <!-- Website Selection Modal -->
+  <div class="website-modal" id="website-modal">
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">✕</button>
+      <h2 class="modal-title">Choose Your Website Type</h2>
+      <div class="modal-cards">
+        <!-- Normal Website Card -->
+        <div class="modal-card">
+          <div class="modal-card-inner">
+            <div class="modal-card-front">
+              <div class="extra-icon">💼</div>
+              <h3>Normal Website</h3>
+              <p class="extra-price">₹6,000</p>
+              <p class="extra-tagline">Perfect for branding & lead generation</p>
+            </div>
+            <div class="modal-card-back">
+              <h3>Normal Website</h3>
+              <ul class="extra-features">
+                <li>⭐ Premium modern business design</li>
+                <li>⭐ Mobile responsive & fast loading</li>
+                <li>⭐ 5–7 essential pages + contact integration</li>
+                <li>⭐ Basic SEO & Google presence setup</li>
+                <li>⭐ Perfect for branding & lead generation</li>
+              </ul>
+              <button class="select-website-btn" data-plan="Normal Website" data-price="6000">SELECT PLAN</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- E-commerce Website Card -->
+        <div class="modal-card">
+          <div class="modal-card-inner">
+            <div class="modal-card-front">
+              <div class="extra-icon">🛒</div>
+              <h3>E-commerce Website</h3>
+              <p class="extra-price">₹10,000</p>
+              <p class="extra-tagline">Built for direct online sales</p>
+            </div>
+            <div class="modal-card-back">
+              <h3>E-commerce Website</h3>
+              <ul class="extra-features">
+                <li>⭐ Complete online store with product management</li>
+                <li>⭐ Secure payment gateway & checkout system</li>
+                <li>⭐ Customer login, cart & order tracking</li>
+                <li>⭐ Inventory, offers & shipping setup</li>
+                <li>⭐ Built for direct online sales & business growth</li>
+              </ul>
+              <button class="select-website-btn" data-plan="E-commerce Website" data-price="10000">SELECT PLAN</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Photography Selection Modal -->
+  <div class="website-modal" id="photography-modal">
+    <div class="modal-overlay" id="photo-modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="photo-modal-close">✕</button>
+      <h2 class="modal-title">Choose Your Photography Package</h2>
+      <div class="modal-cards">
+        <!-- Photography Only Card -->
+        <div class="modal-card">
+          <div class="modal-card-inner">
+            <div class="modal-card-front">
+              <div class="extra-icon">📷</div>
+              <h3>Photography Only</h3>
+              <p class="extra-price">₹20,000</p>
+              <p class="extra-tagline">Professional photoshoot session</p>
+            </div>
+            <div class="modal-card-back">
+              <h3>Photography Only</h3>
+              <ul class="extra-features">
+                <li>⭐ 1 hour professional session</li>
+                <li>⭐ 30-40 high-quality edited photos</li>
+                <li>⭐ Professional DSLR equipment</li>
+                <li>⭐ Studio or location shoot</li>
+                <li>⭐ Full commercial usage rights</li>
+              </ul>
+              <button class="select-photography-btn" data-plan="Photography Only" data-price="20000">SELECT PLAN</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo + Video Card -->
+        <div class="modal-card">
+          <div class="modal-card-inner">
+            <div class="modal-card-front">
+              <div class="extra-icon">🎬</div>
+              <h3>Photo + Video</h3>
+              <p class="extra-price">₹25,000 - ₹35,000</p>
+              <p class="extra-tagline">Complete content production</p>
+            </div>
+            <div class="modal-card-back">
+              <h3>Photo + Video</h3>
+              <ul class="extra-features">
+                <li>⭐ 1 hour professional session</li>
+                <li>⭐ 2 professionally edited videos</li>
+                <li>⭐ 15 high-quality edited photos</li>
+                <li>⭐ Cinematic video production</li>
+                <li>⭐ Full commercial usage rights</li>
+              </ul>
+              <button class="select-photography-btn" data-plan="Photo + Video Package" data-price="25000-35000">SELECT PLAN</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <footer class="footer">
     <div class="footer-content">
@@ -233,8 +326,8 @@
       <div class="footer-section">
         <h3>Contact</h3>
         <div class="footer-links">
-          <a href="mailto:hello@grovixstudio.com">hello@grovixstudio.com</a>
-          <a href="tel:+919999999999">+91 99999 99999</a>
+          <a href="mailto:grovixstudios.official@gmail.com">grovixstudios.official@gmail.com</a>
+          <a href="tel:+919999999999">+91 70090 66489</a>
         </div>
       </div>
     </div>

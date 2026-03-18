@@ -26,7 +26,7 @@ gsap.from('.pricing-card', {
 });
 
 // Extra Cards Animation
-gsap.from('.extra-card', {
+gsap.from('.extra-flip-card', {
   scrollTrigger: {
     trigger: '.extra-services',
     start: 'top 70%',
@@ -71,12 +71,137 @@ const selectPlanButtons = document.querySelectorAll('.select-plan');
 selectPlanButtons.forEach(button => {
   button.addEventListener('click', () => {
     const plan = button.getAttribute('data-plan');
-    const price = button.getAttribute('data-price');
-    const inquiryId = Math.floor(100000 + Math.random() * 900000);
-    
-    const message = `Hello Grovix Studio, I selected ${plan} Plan (₹${price}/month). Inquiry ID: #${inquiryId}`;
-    const whatsappUrl = `https://wa.me/919999999999?text=${encodeURIComponent(message)}`;
-    
-    window.open(whatsappUrl, '_blank');
+    // Redirect to frontend contact page with pre-selected plan
+    window.location.href = `contact.html?plan=${encodeURIComponent(plan)}`;
+  });
+});
+
+// Website Modal Functionality
+const websiteCard = document.getElementById('website-card');
+const websiteModal = document.getElementById('website-modal');
+const modalOverlay = document.getElementById('modal-overlay');
+const modalClose = document.getElementById('modal-close');
+
+let isFlipped = false;
+
+// Detect when card is flipped
+if (websiteCard) {
+  websiteCard.addEventListener('mouseenter', () => {
+    setTimeout(() => {
+      if (!isFlipped) {
+        isFlipped = true;
+        // Show modal after flip animation completes
+        setTimeout(() => {
+          websiteModal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }, 700);
+      }
+    }, 100);
+  });
+}
+
+// Close modal
+function closeModal() {
+  websiteModal.classList.remove('active');
+  document.body.style.overflow = 'auto';
+  isFlipped = false;
+}
+
+if (modalClose) {
+  modalClose.addEventListener('click', closeModal);
+}
+
+if (modalOverlay) {
+  modalOverlay.addEventListener('click', closeModal);
+}
+
+// Close on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && websiteModal.classList.contains('active')) {
+    closeModal();
+  }
+});
+
+// Website Plan Selection
+const selectWebsiteButtons = document.querySelectorAll('.select-website-btn');
+
+selectWebsiteButtons.forEach(button => {
+  button.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const plan = button.getAttribute('data-plan');
+    // Redirect to frontend contact page
+    window.location.href = `contact.html?plan=${encodeURIComponent(plan)}`;
+    closeModal();
+  });
+});
+
+// Photography Modal Functionality
+const photographyCard = document.getElementById('photography-card');
+const photographyModal = document.getElementById('photography-modal');
+const photoModalOverlay = document.getElementById('photo-modal-overlay');
+const photoModalClose = document.getElementById('photo-modal-close');
+
+let isPhotoFlipped = false;
+
+// Detect when photography card is flipped
+if (photographyCard) {
+  photographyCard.addEventListener('mouseenter', () => {
+    setTimeout(() => {
+      if (!isPhotoFlipped) {
+        isPhotoFlipped = true;
+        // Show modal after flip animation completes
+        setTimeout(() => {
+          photographyModal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }, 700);
+      }
+    }, 100);
+  });
+}
+
+// Close photography modal
+function closePhotoModal() {
+  photographyModal.classList.remove('active');
+  document.body.style.overflow = 'auto';
+  isPhotoFlipped = false;
+}
+
+if (photoModalClose) {
+  photoModalClose.addEventListener('click', closePhotoModal);
+}
+
+if (photoModalOverlay) {
+  photoModalOverlay.addEventListener('click', closePhotoModal);
+}
+
+// Close on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && photographyModal.classList.contains('active')) {
+    closePhotoModal();
+  }
+});
+
+// Photography Package Selection
+const selectPhotographyButtons = document.querySelectorAll('.select-photography-btn');
+
+selectPhotographyButtons.forEach(button => {
+  button.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const plan = button.getAttribute('data-plan');
+    // Redirect to frontend contact page
+    window.location.href = `contact.html?plan=${encodeURIComponent(plan)}`;
+    closePhotoModal();
+  });
+});
+
+// Branding Package Selection
+const selectBrandingButtons = document.querySelectorAll('.select-branding-btn');
+
+selectBrandingButtons.forEach(button => {
+  button.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const plan = button.getAttribute('data-plan');
+    // Redirect to frontend contact page
+    window.location.href = `contact.html?plan=${encodeURIComponent(plan)}`;
   });
 });
