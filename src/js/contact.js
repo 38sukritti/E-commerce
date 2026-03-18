@@ -42,6 +42,11 @@ contactForm.addEventListener('submit', async (e) => {
   const business = formData.get('company');
   const service = formData.get('service');
   const message = formData.get('message');
+  
+  const submitBtn = contactForm.querySelector('button[type="submit"]');
+  const originalBtnText = submitBtn.textContent;
+  submitBtn.textContent = 'CONNECTING TO SERVER... (Takes ~45s)';
+  submitBtn.disabled = true;
 
   // Send inquiry to backend so it can save and send WhatsApp/SMS
   let inquiryId = null;
