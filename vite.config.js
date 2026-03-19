@@ -14,7 +14,13 @@ export default defineConfig({
         portfolio: resolve(__dirname, 'portfolio.html'),
         team: resolve(__dirname, 'team.html'),
         contact: resolve(__dirname, 'contact.html'),
-        loading: resolve(__dirname, 'loading.html')
+        loading: resolve(__dirname, 'loading.html'),
+        'service-website': resolve(__dirname, 'service-website.html'),
+        'service-meta-ads': resolve(__dirname, 'service-meta-ads.html'),
+        'service-social-media': resolve(__dirname, 'service-social-media.html'),
+        'service-cold-email': resolve(__dirname, 'service-cold-email.html'),
+        'service-brand': resolve(__dirname, 'service-brand.html'),
+        'service-photo-video': resolve(__dirname, 'service-photo-video.html')
       }
     }
   },
